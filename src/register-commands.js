@@ -19,7 +19,12 @@ const commands = [
             required: true
         },
      ]
-    },
+     
+    },{
+        name:'joke',
+        description:"Tell a random joke."
+        
+    }
 ];
 
 const rest = new REST({version: '10'}).setToken(process.env.TOKEN);

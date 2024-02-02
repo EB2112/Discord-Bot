@@ -38,4 +38,19 @@ client.on('interactionCreate', (interaction) =>{
 
     }
 );
+
+client.on('interactionCreate', (interaction) =>{
+    if(!interaction.isChatInputCommand()) return;
+
+    if(interaction.commandName ==='joke'){
+        interaction.reply('Why did the chicken cross the road?');
+        
+        setTimeout(function punchLine(){
+            interaction.channel.send("To get to the other side!")
+
+        } , 2000)
+        
+    }
+    
+});
 client.login(process.env.TOKEN);
